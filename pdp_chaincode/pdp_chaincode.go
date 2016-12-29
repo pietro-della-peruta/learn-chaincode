@@ -1,5 +1,4 @@
-package main
-
+package pdp_chaincode
 import (
 	"errors"
 	"fmt"
