@@ -20,6 +20,7 @@ func main() {
 }
 
 // Init resets all the things
+//func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error)
 func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("pdp ->... init is running " + function)
 	if len(args) != 3 {
