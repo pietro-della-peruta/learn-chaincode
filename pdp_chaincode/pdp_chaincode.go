@@ -83,18 +83,21 @@ func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string)
 	 
 	key1 = args[0]  
 	value1 = args[1]
+	fmt.Printf("Inserisco prima chiave %s, valore %s \n", key1, value1)
 	err = stub.PutState(key1, []byte(value1)) //write the variable into the chaincode state
 	if err != nil {
 		return nil, err
 	}
 	key2 = args[2]  
 	value2 = args[3]
+	fmt.Printf("Inserisco seconda chiave %s, valore %s \n", key2, value2)
 	err = stub.PutState(key2, []byte(value2)) //write the variable into the chaincode state
 	if err != nil {
 		return nil, err
 	}
 	key3 = args[4]  
 	value3 = args[5]
+	fmt.Printf("Inserisco terza chiave %s, valore %s \n", key3, value3)
 	err = stub.PutState(key3, []byte(value3)) //write the variable into the chaincode state
 	
 	if err != nil {
